@@ -12,6 +12,12 @@ python -m http.server 4318
 
 Apoi deschide `http://127.0.0.1:4318/`.
 
+## Publicare pe GitHub Pages
+
+În repository, deschide **Settings → Pages**, selectează **Deploy from a branch**, apoi alege **main** și folderul **/(root)**. După salvare, site-ul va fi disponibil la:
+
+`https://mrweeb0.github.io/Cristina-Rusu-Epilare/`
+
 ## Conținut folosit
 
 - Servicii, adresă și telefon: detaliile oferite de Nicu în conversație.
