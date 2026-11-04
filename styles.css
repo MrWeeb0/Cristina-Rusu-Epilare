@@ -249,16 +249,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid #9c8850; outline-offs
 }
 
 @media (max-width: 700px) {
-  :root { --gutter: 22px; }
-  html { scroll-padding-top: 72px; }
-  .site-header { height: 72px; }
-  .brand-mark { width: 34px; height: 34px; border-radius: 10px 10px 10px 3px; font-size: 12px; }
+  :root { --gutter: 18px; }
+  html { scroll-padding-top: 66px; }
+  .site-header { height: 66px; }
+  .brand-mark { width: 32px; height: 32px; border-radius: 9px 9px 9px 3px; font-size: 11px; }
   .brand-name { font-size: 9px; }
-  .brand-name small { font-size: 7px; }
   .menu-toggle {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -272,7 +271,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #9c8850; outline-offs
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
   .navigation {
     position: absolute;
-    inset: 72px 0 auto;
+    inset: 66px 0 auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -287,52 +286,64 @@ a:focus-visible, button:focus-visible { outline: 2px solid #9c8850; outline-offs
   .navigation.is-open { max-height: 230px; padding-top: 8px; padding-bottom: 17px; border-color: var(--rule); }
   .navigation > a:not(.nav-cta) { padding: 13px 0; border-bottom: 1px solid var(--rule); }
   .nav-cta { justify-content: space-between; margin-top: 12px; padding: 0 13px; }
-  .page-shell { padding-top: 14px; }
+  .page-shell { padding-top: 10px; }
   .bento-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto;
     min-height: 0;
-    gap: 10px;
+    gap: 8px;
   }
-  .intro-tile { grid-column: 1 / -1; grid-row: auto; min-height: 390px; padding: 29px 25px 23px; }
-  .intro-tile h1 { font-size: clamp(68px, 15vw, 84px); }
-  .intro-actions { margin-top: 26px; }
-  .button { min-height: 50px; padding: 0 17px; gap: 18px; font-size: 11px; }
-  .photo-tile { grid-column: 1 / -1; grid-row: auto; height: min(112vw, 410px); min-height: 320px; }
+  .tile { border-radius: 16px; }
+  .intro-tile { grid-column: 1 / -1; grid-row: auto; min-height: 282px; padding: 23px 22px 20px; }
+  .intro-tile h1 { font-size: clamp(56px, 14vw, 64px); }
+  .intro-signature { display: none; }
+  .intro-actions { margin-top: 22px; }
+  .button { min-height: 48px; padding: 0 16px; gap: 17px; font-size: 11px; }
+  .photo-tile { grid-column: 1 / -1; grid-row: auto; height: clamp(250px, 78vw, 300px); min-height: 0; }
+  .photo-tile img { object-position: center 42%; }
   .service-wax { grid-column: 1; grid-row: auto; }
   .service-lamination { grid-column: 2; grid-row: auto; }
-  .course-tile { grid-column: 1 / -1; grid-row: auto; min-height: 190px; padding: 22px 25px; border-radius: 16px; }
-  .course-tile h2 { font-size: 42px; }
-  .service-tile { min-height: 194px; padding: 18px 15px; border-radius: 16px; }
-  .tile-index { font-size: 10px; letter-spacing: .1em; }
-  .service-bottom { align-items: flex-end; gap: 7px; }
-  .service-bottom h2 { font-size: clamp(25px, 7vw, 30px); }
-  .service-bottom p { max-width: 135px; font-size: 11px; }
-  .round-link { flex-basis: 28px; width: 28px; height: 28px; }
-  .booking-tile { grid-column: 1 / -1; grid-row: auto; min-height: 235px; padding: 23px 25px; border-radius: 16px; }
-  .booking-copy h2 { font-size: clamp(42px, 11vw, 52px); }
-  .booking-actions { gap: 10px; }
-  .location-tile { grid-column: 1 / -1; grid-row: auto; min-height: 170px; padding: 20px 22px; border-radius: 16px; }
-  .location-bottom strong { font-size: 42px; }
-  .site-footer { min-height: 76px; display: grid; grid-template-columns: 1fr auto; row-gap: 8px; padding-top: 15px; }
-  .site-footer > span { grid-column: 1; grid-row: 2; }
-  .site-footer > a:last-child { grid-column: 2; grid-row: 1 / 3; }
+  .service-tile { min-height: 158px; padding: 16px 14px; }
+  .tile-index { font-size: 9px; letter-spacing: .1em; }
+  .service-bottom { align-items: flex-end; gap: 5px; }
+  .service-bottom h2 { font-size: clamp(25px, 7vw, 29px); }
+  .service-bottom p { max-width: 135px; margin-top: 4px; font-size: 10px; }
+  .round-link { flex-basis: 27px; width: 27px; height: 27px; }
+  .course-tile { grid-column: 1 / -1; grid-row: auto; min-height: 122px; padding: 17px 19px; flex-direction: row; align-items: center; border-radius: 16px; }
+  .course-tile h2 { font-size: clamp(25px, 7.2vw, 29px); white-space: nowrap; }
+  .course-tile h2 br { display: none; }
+  .course-action { gap: 7px; font-size: 10px; }
+  .course-action .round-link { width: 27px; height: 27px; flex-basis: 27px; }
+  .booking-tile { grid-column: 1 / -1; grid-row: auto; min-height: 164px; padding: 19px 21px; gap: 12px; }
+  .booking-copy h2 { font-size: clamp(40px, 10vw, 46px); }
+  .booking-actions { gap: 11px; flex-wrap: wrap; }
+  .booking-phone { font-size: 12px; }
+  .location-tile { grid-column: 1 / -1; grid-row: auto; min-height: 130px; padding: 17px 20px; }
+  .location-icon { width: 23px; height: 23px; }
+  .location-bottom strong { font-size: 36px; }
+  .location-bottom span { margin-top: 2px; font-size: 11px; }
+  .site-footer { min-height: 50px; padding: 12px 2px 4px; gap: 10px; }
+  .site-footer > a:last-child { font-size: 9px; }
 }
 
 @media (max-width: 390px) {
-  :root { --gutter: 16px; }
-  .intro-tile { min-height: 395px; padding: 25px 20px 20px; }
-  .intro-tile h1 { font-size: 66px; }
-  .service-tile { padding: 15px 12px; }
-  .booking-tile { padding: 20px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 18px; }
+  :root { --gutter: 15px; }
+  .intro-tile { min-height: 270px; padding: 22px 20px 19px; }
+  .intro-tile h1 { font-size: 56px; }
+  .service-tile { padding: 14px 12px; }
+  .booking-tile { padding: 18px 19px; }
 }
 
 @media (max-width: 350px) {
   .service-wax, .service-lamination { grid-column: 1 / -1; }
-  .service-tile { min-height: 160px; padding: 18px; }
+  .service-tile { min-height: 146px; padding: 17px; }
   .service-bottom h2 { font-size: 32px; }
+  .course-tile { min-height: 142px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; }
+  .course-tile h2 { font-size: 32px; }
+  .course-tile h2 br { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
